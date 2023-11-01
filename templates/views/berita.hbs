@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Berita</title>
+        <link rel="icon" href="/img/weather-icon.png">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/img/weather-icon.png">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <style>
+        body {
+            background: url('img/malam.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <h2>{{judul}}</h2>
+            <div class="berita-list">
+                {{#each berita}}
+                <div class="berita-item">
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                    <a href="{{url}}" target="_blank">Baca selengkapnya</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{>footer}}
+    </body>
+    
+    </html>
